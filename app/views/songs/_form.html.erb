@@ -1,0 +1,15 @@
+<h1><%= @song.id ? 'Edit Song' : 'Create Song' %></h1>
+<hr />
+<%= form_with(model: [@album, @song], local: true, class: "ui form") do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true, autofocus: true %>
+  <br />
+  <%= f.label :genre %>
+  <%= f.text_field :genre, required: true %>
+  <br />
+  <%= f.label :play_count %>
+  <%= f.text_field :play_count, required: true %>
+  <br />
+  <br />
+  <%= f.submit nil, class: "ui button" %>
+<% end %>

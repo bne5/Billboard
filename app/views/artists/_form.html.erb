@@ -1,0 +1,23 @@
+<%= form_with(model: @artist, local: true, class: "ui form") do |f| %>
+  <div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true, autofocus: true %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true%>
+
+  <%= f.label :group %>
+  <%= f.text_field :group, required: true%>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre, required: true%>
+
+  <%= f.label :age %>
+  <%= f.text_field :age, required: true%>
+
+  <%= f.label :avatar %>
+  <%= f.text_field :avatar, required: true%>
+  
+  <%= f.submit nil, class: "ui button"%>
+
+<% end %>

@@ -1,0 +1,8 @@
+<h1><%= @album.name %></h1>
+<h4>Name: <%= @song.title %></h4>
+<h4>Species: <%= @song.genre %></h4>
+<h4>Age: <%= @song.play_count %></h4>
+<br />
+<%= link_to 'Edit Song', edit_album_song_path([@album, @song]) %> |
+<%= link_to 'Delete Song', [@album, @song], method: :delete %> |
+<%= link_to 'Back To Songs', album_songs_path(@album) %>

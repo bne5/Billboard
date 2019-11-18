@@ -1,0 +1,10 @@
+<h1>Click a Song To View It</h1>
+<%= link_to 'Add Song', new_album_song_path(@album) %>
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.title, [@album, song] %></li> 
+  <% end %>
+</ul>
+
+<br />
+<%= link_to 'Add Song', new_album_song_path(@album) %> |

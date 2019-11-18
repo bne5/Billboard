@@ -1,0 +1,12 @@
+<h1>Click an Album To View It</h1>
+<br />
+
+<ul>
+  <% @albums.each do |album| %>
+    <li><%= link_to album.name, [@artist, album] %></li> 
+  <% end %>
+</ul>
+
+<br />
+<%= link_to 'Add Album', new_artist_album_path(@artist) %> |
+<%= link_to 'Back To Artist', artist_path(@artist) %>

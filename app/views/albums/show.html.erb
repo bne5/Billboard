@@ -1,0 +1,9 @@
+<h1><%= @artist.group %></h1>
+<h4>Name: <%= @album.name %></h4>
+<h4>Species: <%= @album.genre %></h4>
+<h4>Age: <%= @album.year %></h4>
+<br />
+<%= link_to 'Edit Album', edit_artist_album_path([@artist, @album]) %> |
+<%= link_to 'Delete Album', [@artist, @album], method: :delete %> |
+<%= link_to 'View Songs', album_songs_path(@album) %> |
+<%= link_to 'Back To Albums', artist_albums_path(@artist) %>

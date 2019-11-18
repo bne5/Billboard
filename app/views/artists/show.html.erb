@@ -1,2 +1,24 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<div class="ui card">
+  <div class="image">
+    <img src="https://robohash.org/<%= @artist.avatar %>?set=set2" />
+  </div>
+  <div class="content">
+    <p class="header">
+      <%= @artist.first_name %> <%= @artist.last_name %>
+    </p>
+    <div class="meta">
+      <span><%= @artist.group %></span>
+    </div>
+    <div class="description">
+      <%= @artist.genre %>
+    </div>
+    <div class="description">
+      <%= @artist.age %>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= link_to 'Edit', edit_artist_path(@artist) %> |
+    <%= link_to 'View Albums', artist_albums_path(@artist) %> |
+    <%= link_to 'All Artist', artists_path %>
+  </div>
+</div>
